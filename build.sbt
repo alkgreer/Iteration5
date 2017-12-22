@@ -6,8 +6,7 @@ scalaVersion := "2.12.4"
 
 
 libraryDependencies ++= Seq(
-  "org.json4s" %% "json4s-jackson" % "3.5.2",
-  "org.asynchttpclient" % "async-http-client" % "2.0.32",
-  "org.slf4j" % "slf4j-simple" % "1.7.21" % "runtime",
+  "org.scalacheck" %% "scalacheck" % "1.13.4" % "test",
+  "org.scalatest" %% "scalatest" % "3.0.4" % "test",
   "org.specs2" %% "specs2-core" % "3.8.6" % Test
 )
