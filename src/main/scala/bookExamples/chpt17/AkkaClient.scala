@@ -1,7 +1,8 @@
 // src/main/scala/bookExamples/chpt17/AkkaClient.scala
 package bookExamples.chpt17
-import akka.actor.{ActorRef, ActorSystem, Props}
+import akka.actor._
 import java.lang.{NumberFormatException => NFE}
+
 
 object AkkaClient {                                                  // <1>
   import Messages._
@@ -97,7 +98,7 @@ object AkkaClient {                                                  // <1>
     |""".stripMargin
 
   private def exit(message: String, status: Int): Nothing = {        // <20>
-    for (sys <- system) sys.shutdown()
+    for (sys <- system) sys.terminate()
     println(message)
     sys.exit(status)
   }
